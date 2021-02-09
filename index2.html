@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script type="text/babel">
+
+        // JSX
+        const rootElement = document.getElementById("root")
+        const name = "Judie"
+        const className = "container"
+        const props = {
+            className: "container-test",
+            onClick: ()=> console.log('Hello, everyone!')
+        }
+        const element = <div className={className} {...props}>
+            <h1 className="hello-react-text">Welcome {name} !</h1>
+        </div>
+
+        ReactDOM.render(
+            element,
+            rootElement
+        )
+
+        // //// React
+        // const rootElement = document.getElementById("root")
+        // const element = React.createElement(
+        //     "div",
+        //     {
+        //         className: "container"
+        //     },
+        //     React.createElement(
+        //         "h1",
+        //         {
+        //             className: "hello-react-text"
+        //         },
+        //         "hello, React !"
+        //     )
+
+        // )
+
+        // ReactDOM.render(
+        //     element,
+        //     rootElement
+        // )
+
+
+
+    </script>
+</body>
+
+</html>
